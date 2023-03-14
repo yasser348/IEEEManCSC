@@ -1,0 +1,67 @@
+1-What do you know about missing values in the data? Also, tell some different techniques to handle them?
+missing data considered an obstacle for most ML algorithms, so we need to handle them  by deletion or imputing them:
+A-delete the column can be used in some cases like:
+-if the amount of the missing data is very high, like 60% or greater.
+-if the column has little or no value in our model such as the color of the sidewalk column in the house dataset, in this
+case if the column has no predictive value this could be the appropriate solution.
+in general before deleting any column, i need to care about this one because it does not carry valuable information such as the 
+brand of car for the model to predict the price of the model.
+B-delete the rows: this technique can be used:
+-if the row is almost missing in its values
+Deleted rows or columns have to be tested because they can generate bias or reduce the size of the data
+by seeing the performance of the model.
+*-mode,mean,median imputation:this imputation is the easiest technique to deal with the missed data, i used it before but after
+doing searches, i found these techniques have many drawbacks on the data statically to use these tecniques, you have to avoide
+MNAR type(MNAR is a type of missing data, and this means the missing data is missed depending on the column, not related to another
+columns):
+C-mean imputation:is easy, but almost, it is a bad technique, because when you replace the missing data with the mean you reduce the 
+variability in the data (spread the data) and made it centered in a specific place (the mean point) so you can note this can produce 
+bias to the mean point
+D-mode imputation can be used if the data is numerical or categorical,mode imputation can be used if the percentage of missing values is low
+but it also reduces the variability and changes the distribution of the data too, and these considered as disadvantages.
+E-median imputation can lead to similar results as mode imputation.
+in general, as we mentioned before, these techniques are harmful to the statistics of the data, so their
+drawbacks first should be known
+3-Multiple imputation:this technique is different because it depends on mathematical calculations such as linear regression
+or another algorithm such ass KNN algorithm,tree decision,MI finds the missing values in the column depending on the other columns, and this makes this technique powerful and does
+I did not produce bias, i did  searches on it, but i need more practice to use it in the right way.
+-----------------------
+2-What's the difference between a python list and a NumPy array?
+A-list holds different data types such as ,strings, lists, numbers, and others, but nparray holds just numerical data like integers and floats.
+B-operations like accessing,inserting,deleting are easy for lists but more complicated for nparray.
+C-nparray is the standard for mathematical operations in linear algebra, and Numpy provides many built in functions that can be applied on nparray, python lists
+does not support it 
+-----------------------
+3-In your opinion, which is better to use (Pie-chart vs Barplot).support your answer with an example?
+the answer depends on the situation, If the data visualized is about 2 to 6 categories, i think pie chart is better here,
+because the number on the visualized objects is small, on the other hand if you will visualize many objects like 2 to 15 or more
+bar chart would be the best choice,because it provides a big interface that lets you see the visualized objects clearly 
+and ordered, side by side.
+-----------------------
+What is the difference between explanatory data analysis and exploratory data analysis?
+i do not know what explanatory data analysis is, i just studied exploratory data analysis, which is about exploring the data.
+,this is a satge that you do not know anything about the data,by using the EDA you will be able to make a brief about what 
+the content of the data is, after EDA you can get many insights by doing univariate/multivariate analysis, EDA
+includes some operations such as data cleaning, feature understanding and data visualization, and other operations, EDA can
+be considered the stage before putting the data into the ML algorithm. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
